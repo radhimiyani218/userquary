@@ -10,11 +10,11 @@ app.get("/", async (req, res) => {
     res.send(data)
 })
 app.get("/que2"),async(req,res)=>{
-    const data=await user.find({gender: "female", language: {$in: ["Kannada", "Hindi"]}})
+    const data=await user.find({gender: "Female", language: {$in: ["Kannada", "Hindi"]}})
     res.send(data)
 }
 app.get("/que3"),async(req,res)=>{
-    const data=await user.find({$or: [{gender: "male", language: "Hindi"}, {gender: "female", language: "Kannada"}]})
+    const data=await user.find({$or: [{gender: "Male", language: "Hindi"}, {gender: "Female", language: "Kannada"}]})
     res.send(data)
 }
 app.get("/que4"),async(req,res)=>{
@@ -22,29 +22,30 @@ app.get("/que4"),async(req,res)=>{
     res.send(data)
 }
 app.get("/que5"),async(req,res)=>{
-    const data=await user.find({gender: "female", shirt_size: "XL"})
+    const data=await user.find({gender: "Female", shirt_size: "XL"})
     res.send(data)
 }
 app.get("/que6"),async(req,res)=>{
-    const data=await user.find({$or: [{gender: "male", language: "English"}, {gender: "female", language: "Hindi"}]})
+    const data=await user.find({$or: [{gender: "Male", language: "English"}, {gender: "Female", language: "Hindi"}]})
     res.send(data)
 }
 app.get("/que7"),async(req,res)=>{
-    const data=await user.find({$or: [{gender: "male", language:{$in:["English","Hindi"]}}, {gender: "female", language:{$in:["Kannada","German"]}}]})
+    const data=await user.find({$or: [{gender: "Male", language:{$in:["English","Hindi"]}}, {gender: "Female", language:{$in:["Kannada","German"]}}]})
     res.send(data)
 }
 app.get("/que8"),async(req,res)=>{
-    const data=await user.find({$or: [{gender: "female", language:"Bengali",shirt_size:"XL"},{gender: "male", language:"German",shirt_size:{$in:['L','M']}}]})
+    const data=await user.find({$or: [{gender: "Female", language:"Bengali",shirt_size:"XL"},{gender: "Male", language:"German",shirt_size:{$in:['L','M']}}]})
     res.send(data)
 }
 app.get("/que9"),async(req,res)=>{
-    const data=await user.find({gender: "female", language:{$in:["Hindi","Punjabi", "Bengali", "Gujarati", "Tamil", "Malayalam"]}})
+    const data=await user.find({gender: "Female", language:{$in:["Hindi","Punjabi", "Bengali", "Gujarati", "Tamil", "Malayalam"]}})
     res.send(data)
 }
 app.get("/que10"),async(req,res)=>{
-    const data=await user.find({gender: "male", language:"Korean"})
+    const data=await user.find({gender: "Male", language:"Korean"})
     res.send(data)
 }
+
 
 
 app.listen(8090,()=>{
